@@ -1,0 +1,63 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "animateur",
+            "relationshipNameCapitalized": "Animateur",
+            "relationshipFieldName": "animateur",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "User",
+            "otherEntityField": "lastName"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "Etat_session",
+            "relationshipNameCapitalized": "Etat_session",
+            "relationshipFieldName": "etat_session",
+            "otherEntityName": "etat_session",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Etat_session",
+            "otherEntityField": "libelle"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "theme",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Theme",
+            "fieldNameUnderscored": "theme",
+            "fieldInJavaBeanMethod": "Theme",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "sessionStart",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "SessionStart",
+            "fieldNameUnderscored": "session_start",
+            "fieldInJavaBeanMethod": "SessionStart",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "sessionEnd",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "SessionEnd",
+            "fieldNameUnderscored": "session_end",
+            "fieldInJavaBeanMethod": "SessionEnd",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150607162022",
+    "pagination": "pager",
+    "validation": false
+}

@@ -1,0 +1,51 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "titre",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Titre",
+            "fieldNameUnderscored": "titre",
+            "fieldInJavaBeanMethod": "Titre",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "categorie",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Categorie",
+            "fieldNameUnderscored": "categorie",
+            "fieldInJavaBeanMethod": "Categorie",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "sujet",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Sujet",
+            "fieldNameUnderscored": "sujet",
+            "fieldInJavaBeanMethod": "Sujet",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "url",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Url",
+            "fieldNameUnderscored": "url",
+            "fieldInJavaBeanMethod": "Url",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150701130533",
+    "pagination": "pager",
+    "validation": false
+}

@@ -1,0 +1,22 @@
+{
+    "codingApp": {
+        "codingSession" : {
+            "home": {
+                "title": "CodingSessions",
+                "createLabel": "Create a new CodingSession",
+                "createOrEditLabel": "Create or edit a CodingSession"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete CodingSession {{ id }}?"
+            },
+            "detail": {
+                "title": "CodingSession"
+            },
+            "theme": "Theme",
+            "sessionStart": "SessionStart",
+            "sessionEnd": "SessionEnd",
+            "animateur": "animateur",
+            "Etat_session": "Etat_session"
+        }
+    }
+}

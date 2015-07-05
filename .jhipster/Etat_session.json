@@ -1,0 +1,24 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "libelle",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Libelle",
+            "fieldNameUnderscored": "libelle",
+            "fieldInJavaBeanMethod": "Libelle",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150607153502",
+    "pagination": "no",
+    "validation": false
+}

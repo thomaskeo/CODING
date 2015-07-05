@@ -1,0 +1,25 @@
+{
+    "codingApp": {
+        "seancePrive" : {
+            "home": {
+                "title": "SeancePrives",
+                "createLabel": "Créer un nouveau SeancePrive",
+                "createOrEditLabel": "Créer ou éditer un SeancePrive"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le SeancePrive {{ id }} ?"
+            },
+            "detail": {
+                "title": "SeancePrive"
+            },
+            "titre": "Titre",
+            "categorie": "Categorie",
+            "sujet": "Sujet",
+            "datedebut": "Datedebut",
+            "datefin": "Datefin",
+            "nbutilisateur": "Nbutilisateur",
+            "user": "user"
+        }
+    }
+}
+

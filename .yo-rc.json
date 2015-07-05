@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "baseName": "coding",
+    "packageName": "fr.iut.coding",
+    "packageFolder": "fr/iut/coding",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "c2ea571c80b8a934e6466c5cd802ab8ef47ea82a"
+  }
+}

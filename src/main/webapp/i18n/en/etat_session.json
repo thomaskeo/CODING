@@ -1,0 +1,18 @@
+{
+    "codingApp": {
+        "etat_session" : {
+            "home": {
+                "title": "Etat_sessions",
+                "createLabel": "Create a new Etat_session",
+                "createOrEditLabel": "Create or edit a Etat_session"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Etat_session {{ id }}?"
+            },
+            "detail": {
+                "title": "Etat_session"
+            },
+            "libelle": "Libelle"
+        }
+    }
+}

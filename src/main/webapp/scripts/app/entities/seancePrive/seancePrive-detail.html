@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="codingApp.seancePrive.detail.title">SeancePrive</span> {{seancePrive.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="codingApp.seancePrive.titre">Titre</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{seancePrive.titre}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.seancePrive.categorie">Categorie</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{seancePrive.categorie}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.seancePrive.sujet">Sujet</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{seancePrive.sujet}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.seancePrive.datedebut">Datedebut</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{seancePrive.datedebut}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.seancePrive.datefin">Datefin</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{seancePrive.datefin}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.seancePrive.nbutilisateur">Nbutilisateur</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{seancePrive.nbutilisateur}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.seancePrive.user">user</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{seancePrive.user.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="seancePrive"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

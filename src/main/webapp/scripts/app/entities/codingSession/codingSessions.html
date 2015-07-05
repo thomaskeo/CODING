@@ -1,0 +1,144 @@
+<div>
+
+    <h2 translate="codingApp.codingSession.home.title">CodingSession</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveCodingSessionModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="codingApp.codingSession.home.createLabel">Create a new CodingSession</span>
+    </button>
+    <div class="modal fade" id="saveCodingSessionModal" tabindex="-1" role="dialog" aria-labelledby="myCodingSessionLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myCodingSessionLabel" translate="codingApp.codingSession.home.createOrEditLabel">Create or edit a CodingSession</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="codingSession.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="codingApp.codingSession.theme">Theme</label>
+                            <input type="text" class="form-control" name="theme"
+                                   ng-model="codingSession.theme">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="codingApp.codingSession.sessionStart">SessionStart</label>
+                            <input type="datetime-local" class="form-control" name="sessionStart"
+                                   ng-model="codingSession.sessionStart" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="codingApp.codingSession.sessionEnd">SessionEnd</label>
+                            <input type="datetime-local" class="form-control" name="sessionEnd"
+                                   ng-model="codingSession.sessionEnd" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="codingApp.codingSession.animateur">animateur</label>
+                            <select class="form-control" name="animateur" ng-model="codingSession.animateur.id" ng-options="user.id as user.lastName for user in users">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="codingApp.codingSession.Etat_session">Etat_session</label>
+                            <select class="form-control" name="Etat_session" ng-model="codingSession.Etat_session.libelle" ng-options="etat_session.id as etat_session.libelle for etat_session in etat_sessions">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteCodingSessionConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(codingSession.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="codingApp.codingSession.delete.question" translate-values="{id: '{{codingSession.id}}'}">Are you sure you want to delete this CodingSession?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="codingApp.codingSession.theme">Theme</th>
+                    <th translate="codingApp.codingSession.sessionStart">SessionStart</th>
+                    <th translate="codingApp.codingSession.sessionEnd">SessionEnd</th>
+                    <th translate="codingApp.codingSession.animateur">animateur</th>
+                    <th translate="codingApp.codingSession.Etat_session">Etat_session</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="codingSession in codingSessions">
+                    <td><a ui-sref="codingSessionDetail({id:codingSession.id})">{{codingSession.id}}</a></td>
+                    <td>{{codingSession.theme}}</td>
+                    <td>{{codingSession.sessionStart}}</td>
+                    <td>{{codingSession.sessionEnd}}</td>
+                    <td>{{codingSession.animateur.lastName}}</td>
+                    <td>{{codingSession.Etat_session.libelle}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="codingSessionDetail({id:codingSession.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(codingSession.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(codingSession.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pager">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a href="#">&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a href="#">&lt;</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a href="#">&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a href="#">&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

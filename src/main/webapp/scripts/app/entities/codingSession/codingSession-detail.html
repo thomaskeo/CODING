@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="codingApp.codingSession.detail.title">CodingSession</span> {{codingSession.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="codingApp.codingSession.theme">Theme</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codingSession.theme}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.codingSession.sessionStart">Debut de la session</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codingSession.sessionStart}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.codingSession.sessionEnd">Fin de la session</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codingSession.sessionEnd}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.codingSession.animateur">Animateur</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codingSession.animateur.lastName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.codingSession.Etat_session">Etat de la session</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{codingSession.etat_session.libelle}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="codingSession"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

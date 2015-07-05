@@ -1,0 +1,22 @@
+{
+    "codingApp": {
+        "ajouterVideo" : {
+            "home": {
+                "title": "AjouterVideos",
+                "createLabel": "Créer un nouveau AjouterVideo",
+                "createOrEditLabel": "Créer ou éditer un AjouterVideo"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le AjouterVideo {{ id }} ?"
+            },
+            "detail": {
+                "title": "AjouterVideo"
+            },
+            "titre": "Titre",
+            "categorie": "Categorie",
+            "sujet": "Sujet",
+            "url": "Url"
+        }
+    }
+}
+

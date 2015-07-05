@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity CodingSession.
+    -->
+    <changeSet id="20150607162022" author="jhipster">
+        <createTable tableName="T_CODINGSESSION">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="theme" type="varchar(255)"/>
+            <column name="session_start" type="timestamp"/>
+            <column name="session_end" type="timestamp"/>
+            <column name="animateur_id" type="bigint"/>
+            <column name="etat_session_id" type="bigint"/>
+        </createTable>
+        <dropDefaultValue tableName="T_CODINGSESSION" columnName="session_start" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_CODINGSESSION" columnName="session_end" columnDataType="datetime"/>
+
+        
+        <addForeignKeyConstraint baseColumnNames="animateur_id"
+                                 baseTableName="T_CODINGSESSION"
+                                 constraintName="fk_codingsession_animateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_USER"/>
+
+        <addForeignKeyConstraint baseColumnNames="etat_session_id"
+                                 baseTableName="T_CODINGSESSION"
+                                 constraintName="fk_codingsession_etat_session_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_ETAT_SESSION"/>
+
+    </changeSet>
+</databaseChangeLog>

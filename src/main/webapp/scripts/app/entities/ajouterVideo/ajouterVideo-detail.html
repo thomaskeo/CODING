@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="codingApp.ajouterVideo.detail.title">AjouterVideo</span> {{ajouterVideo.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="codingApp.ajouterVideo.titre">Titre</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{ajouterVideo.titre}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.ajouterVideo.categorie">Categorie</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{ajouterVideo.categorie}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.ajouterVideo.sujet">Sujet</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{ajouterVideo.sujet}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="codingApp.ajouterVideo.url">Url</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{ajouterVideo.url}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="ajouterVideo"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

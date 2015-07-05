@@ -1,0 +1,19 @@
+{
+    "codingApp": {
+        "etat_session" : {
+            "home": {
+                "title": "Etat_sessions",
+                "createLabel": "Créer un nouveau Etat_session",
+                "createOrEditLabel": "Créer ou éditer un Etat_session"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Etat_session {{ id }} ?"
+            },
+            "detail": {
+                "title": "Etat_session"
+            },
+            "libelle": "Libelle"
+        }
+    }
+}
+
